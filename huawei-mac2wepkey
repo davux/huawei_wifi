@@ -1,3 +1,4 @@
+#! /usr/bin/python
 # mac2wepkey Huawei HG520 by hochoa@websec.mx - 12/2010
 
 def hex2dec(s):
