@@ -70,12 +70,17 @@ def mac2key(mac):
     return (key, ssid)
 
 if __name__ == "__main__":
+    from sys import argv
     print "\n  #####################################################"
     print "  #         Huawei Echo Life HG520 mac2wepkey         #"
     print "  #        hochoa@websec.mx  - http://websec.mx       #"
     print "  #####################################################"
 
-    mac2=raw_input("\n  Ingresa la MAC: ").replace(':','')
-    mac = map(hex2dec, mac2)
+    if 1 < len(argv):
+        print "\n  MAC: " + argv[1]
+        mac2 = argv[1]
+    else:
+        mac2=raw_input("\n  Ingresa la MAC: ")
+    mac = map(hex2dec, mac2.replace(':',''))
     keyinfo = mac2key(mac)
     print "\n          WEP = " + keyinfo[0] + "      SSID = " + keyinfo[1] +"\n\n"
