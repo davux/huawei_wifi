@@ -69,13 +69,13 @@ def mac2key(mac):
     ssid = str(ssidchars[s1])+str(ssidchars[s2])+str(ssidchars[s3])+str(ssidchars[s4])
     return (key, ssid)
 
-print "\n  #####################################################"
-print "  #         Huawei Echo Life HG520 mac2wepkey         #"
-print "  #        hochoa@websec.mx  - http://websec.mx       #"
-print "  #####################################################"
+if __name__ == "__main__":
+    print "\n  #####################################################"
+    print "  #         Huawei Echo Life HG520 mac2wepkey         #"
+    print "  #        hochoa@websec.mx  - http://websec.mx       #"
+    print "  #####################################################"
 
-mac2=raw_input("\n  Ingresa la MAC: ").replace(':','')
-mac = map(hex2dec, mac2)
-keyinfo = mac2key(mac)
-print "\n          WEP = " + keyinfo[0] + "      SSID = " + keyinfo[1] +"\n\n"
-
+    mac2=raw_input("\n  Ingresa la MAC: ").replace(':','')
+    mac = map(hex2dec, mac2)
+    keyinfo = mac2key(mac)
+    print "\n          WEP = " + keyinfo[0] + "      SSID = " + keyinfo[1] +"\n\n"
