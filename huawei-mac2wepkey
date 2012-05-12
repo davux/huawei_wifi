@@ -10,11 +10,7 @@ print "  #        hochoa@websec.mx  - http://websec.mx       #"
 print "  #####################################################"
 
 mac2=raw_input("\n  Ingresa la MAC: ").replace(':','')
-i=0
-mac=[]
-while i<12:
-    mac.insert(i,hex2dec(mac2[i]))
-    i=i+1
+mac = map(hex2dec, mac2)
 
 def mac2key(mac):
     a0=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
