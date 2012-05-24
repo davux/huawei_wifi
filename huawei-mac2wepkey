@@ -85,5 +85,4 @@ if __name__ == "__main__":
         mac = argv[1]
     else:
         mac=raw_input("\n  Ingresa la MAC: ")
-    keyinfo = mac2key(mac)
     print "\n          WEP = " + mac2key(mac) + "      SSID = " + mac2ssid(mac) +"\n\n"
