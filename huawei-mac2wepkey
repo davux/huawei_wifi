@@ -77,8 +77,8 @@ def mac2ssid(mac_as_string):
     s2=(n2[mac[0]])^(n8[mac[1]])^(n15[mac[2]])^(n17[mac[3]])^(a12[mac[4]])^(n21[mac[5]])^(n24[mac[6]])^(a9[mac[7]])^(n27[mac[8]])^(n29[mac[9]])^(a11[mac[10]])^(n32[mac[11]])^10
     s3=(n3[mac[0]])^(n9[mac[1]])^(a5[mac[2]])^(a9[mac[3]])^(n19[mac[4]])^(n22[mac[5]])^(a12[mac[6]])^(n25[mac[7]])^(a11[mac[8]])^(a13[mac[9]])^(n30[mac[10]])^(n33[mac[11]])^11
     s4=(n4[mac[0]])^(n10[mac[1]])^(n16[mac[2]])^(n18[mac[3]])^(a13[mac[4]])^(n23[mac[5]])^(a1[mac[6]])^(n26[mac[7]])^(n28[mac[8]])^(a3[mac[9]])^(a6[mac[10]])^(a0[mac[11]])^10
-    ssidchars=[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
-    return str(ssidchars[s1])+str(ssidchars[s2])+str(ssidchars[s3])+str(ssidchars[s4])
+    ssidchars=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+    return ssidchars[s1]+ssidchars[s2]+ssidchars[s3]+ssidchars[s4]
 
 if __name__ == "__main__":
     from sys import argv
