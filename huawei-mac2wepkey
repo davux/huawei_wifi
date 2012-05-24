@@ -1,5 +1,12 @@
 #! /usr/bin/python
-# mac2wepkey Huawei HG520 by hochoa@websec.mx - 12/2010
+
+##
+## mac2wepkey - Default WEP key generator for Huawei HG520
+##
+## Original reverse-engineering and code:
+##     hochoa@websec.mx - http://websec.mx (12/2010)
+## Further improved by David Ammouial (2012)
+##
 
 a0=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 a1=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
