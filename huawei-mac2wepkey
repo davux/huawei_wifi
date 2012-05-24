@@ -83,8 +83,8 @@ def mac2ssid(mac_as_string):
 if __name__ == "__main__":
     from sys import argv
     if 1 < len(argv):
-        mac = argv[1]
-        print "WEP = " + mac2key(mac) + "\tSSID = " + mac2ssid(mac)
+        for mac in argv[1:]:
+            print mac + "\tWEP = " + mac2key(mac) + "\tSSID = " + mac2ssid(mac)
     else:
         print "\n  #####################################################"
         print "  #         Huawei Echo Life HG520 mac2wepkey         #"
