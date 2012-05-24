@@ -82,14 +82,13 @@ def mac2ssid(mac_as_string):
 
 if __name__ == "__main__":
     from sys import argv
-    print "\n  #####################################################"
-    print "  #         Huawei Echo Life HG520 mac2wepkey         #"
-    print "  #        hochoa@websec.mx  - http://websec.mx       #"
-    print "  #####################################################"
-
     if 1 < len(argv):
-        print "\n  MAC: " + argv[1]
         mac = argv[1]
+        print "WEP = " + mac2key(mac) + "\tSSID = " + mac2ssid(mac)
     else:
+        print "\n  #####################################################"
+        print "  #         Huawei Echo Life HG520 mac2wepkey         #"
+        print "  #        hochoa@websec.mx  - http://websec.mx       #"
+        print "  #####################################################"
         mac=raw_input("\n  Ingresa la MAC: ")
-    print "\n          WEP = " + mac2key(mac) + "      SSID = " + mac2ssid(mac) +"\n\n"
+        print "\n          WEP = " + mac2key(mac) + "      SSID = " + mac2ssid(mac) +"\n\n"
