@@ -90,5 +90,9 @@ if __name__ == "__main__":
         print "  #         Huawei Echo Life HG520 mac2wepkey         #"
         print "  #        hochoa@websec.mx  - http://websec.mx       #"
         print "  #####################################################"
-        mac=raw_input("\n  Ingresa la MAC: ")
-        print "\n          WEP = %s      SSID = %s\n\n" % (mac2key(mac), mac2ssid(mac))
+        while True:
+            mac=raw_input("\n  Ingresa la MAC: ")
+            if 0 < len(mac):
+                print "\n          WEP = %s      SSID = %s\n\n" % (mac2key(mac), mac2ssid(mac))
+            else:
+                break
