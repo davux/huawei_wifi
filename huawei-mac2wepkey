@@ -84,11 +84,11 @@ if __name__ == "__main__":
     from sys import argv
     if 1 < len(argv):
         for mac in argv[1:]:
-            print mac + "\tWEP = " + mac2key(mac) + "\tSSID = " + mac2ssid(mac)
+            print "%s\tWEP = %s\tSSID = %s" % (mac, mac2key(mac), mac2ssid(mac))
     else:
         print "\n  #####################################################"
         print "  #         Huawei Echo Life HG520 mac2wepkey         #"
         print "  #        hochoa@websec.mx  - http://websec.mx       #"
         print "  #####################################################"
         mac=raw_input("\n  Ingresa la MAC: ")
-        print "\n          WEP = " + mac2key(mac) + "      SSID = " + mac2ssid(mac) +"\n\n"
+        print "\n          WEP = %s      SSID = %s\n\n" % (mac2key(mac), mac2ssid(mac))
