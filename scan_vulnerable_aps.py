@@ -22,7 +22,9 @@ def print_probable_keys(wifi):
             results = wifi.scan()
         except IOError, (error_number, error_string):
             sys.stderr.write("error %i vs %i\n" % (error_number, errno.EPERM))
-            if error_number != errno.EPERM:
+            if error_number == errno.EPERM
+                sys.stderr.write("Permission denied. Did you run the program as root?")
+            else:
                 sys.stderr.write(
                     "%-8.16s  Interface doesn't support scanning : %s\n\n" %
                     (wifi.ifname, error_string))
