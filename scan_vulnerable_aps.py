@@ -4,9 +4,12 @@ import errno
 import sys
 import types
 from mac2defaults import default_key, default_ssid
-
-import pythonwifi.flags
-from pythonwifi.iwlibs import Wireless, Iwrange, getNICnames
+try:
+    import pythonwifi.flags
+    from pythonwifi.iwlibs import Wireless, Iwrange, getNICnames
+except ImportError:
+    sys.stderr.write("Error: missing pythonwifi module\n")
+    sys.exit(1)
 
 def print_probable_keys(wifi):
     """ Print the probable keys
