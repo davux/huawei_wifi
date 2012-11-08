@@ -27,7 +27,6 @@ def print_probable_keys(wifi):
                 sys.stderr.write(
                     "%-8.16s  Interface doesn't support scanning : %s\n\n" %
                     (wifi.ifname, error_string))
-        print("%i results" % len(results))
         for ap in results:
             print ap.mode
             if "Master" == ap.mode:
