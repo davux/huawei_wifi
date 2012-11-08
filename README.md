@@ -11,7 +11,8 @@ This repository contains two programs that make use of the discovery.
 mac2defaults.py
 ---------------
 
-This is the original script, improved so that it looks like Python anc not C.
+This is the original script, improved so that it looks more like Python and
+less like C.
 The output was also cleaned a bit, and the program accepts one or several MAC
 addresses as command-line parameters. Last of all, the program works as a
 Python module so that it can be used by other programs.
