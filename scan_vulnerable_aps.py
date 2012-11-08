@@ -33,9 +33,10 @@ def print_probable_keys(wifi):
             if "Master" == ap.mode:
                 defaultkey = default_key(ap.bssid)
                 defaultessid = default_ssid(ap.bssid)
-                print("- %s: try %s" % (ap.essid, defaultkey))
                 if ap.essid[-4:] == defaultessid:
-                    print "Probable key for %s: %s" % (ap.essid, defaultkey)
+                    print "* %s: %s" % (ap.essid, defaultkey)
+                else:
+                    print "- %s: %s" % (ap.essid, defaultkey)
 
 
 def main():
