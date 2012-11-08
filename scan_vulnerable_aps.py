@@ -30,8 +30,8 @@ def print_probable_keys(wifi):
         for ap in results:
             print ap.mode
             if "Master" == ap.mode:
-                defaultkey = mac2key(ap.bssid)
-                defaultessid = mac2ssid(ap.bssid)
+                defaultkey = default_key(ap.bssid)
+                defaultessid = default_ssid(ap.bssid)
                 print("- %s: try %s" % (ap.essid, defaultkey))
                 if substr(ap.essid, -4) == defaultessid:
                     print "Probable key for %s: %s" % (ap.essid, defaultkey)
