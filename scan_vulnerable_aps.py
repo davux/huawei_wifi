@@ -30,14 +30,15 @@ def print_probable_keys(wifi):
                 sys.stderr.write(
                     "%-8.16s  Interface doesn't support scanning : %s\n\n" %
                     (wifi.ifname, error_string))
-        for ap in results:
-            if "Master" == ap.mode:
-                defaultkey = default_key(ap.bssid)
-                defaultessid = default_ssid(ap.bssid)
-                if ap.essid[-4:] == defaultessid:
-                    print "* %s: %s" % (ap.essid, defaultkey)
-                else:
-                    print "- %s: %s" % (ap.essid, defaultkey)
+        else:
+            for ap in results:
+                if "Master" == ap.mode:
+                    defaultkey = default_key(ap.bssid)
+                    defaultessid = default_ssid(ap.bssid)
+                    if ap.essid[-4:] == defaultessid:
+                        print "* %s: %s" % (ap.essid, defaultkey)
+                    else:
+                        print "- %s: %s" % (ap.essid, defaultkey)
 
 
 def main():
