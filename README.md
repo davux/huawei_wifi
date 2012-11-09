@@ -13,9 +13,17 @@ mac2defaults.py
 
 This is the original script, improved so that it looks more like Python and
 less like C.
-The output was also cleaned a bit, and the program accepts one or several MAC
-addresses as command-line parameters. Last of all, the program works as a
-Python module so that it can be used by other programs.
+The output was also cleaned a bit, and the program can work either in
+interactive or automated mode.
+
+- Interactive mode means no command-line parameter was given. The program then
+  asks for a MAC address and outputs the corresponding key and default ESSID.
+  Then it starts over until an empty address is given.
+- When one or several MAC addresses are given on the command line, the program
+  outputs the corresponding default key and ESSID in a machine-parseable
+  format.
+
+The program works as a Python module so that it can be used by other programs.
 
 
 scan_vulnerable_aps.py
