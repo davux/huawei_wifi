@@ -25,7 +25,8 @@ interactive or automated mode.
   outputs the corresponding default key and ESSID in a machine-parseable
   format.
 
-The program works as a Python module so that it can be used by other programs.
+The program works as a Python module as well, which means its functions can be
+used by other programs internally.
 
 
 scan_vulnerable_aps.py
