@@ -1,9 +1,11 @@
 Wifi utilities for finding Huawei routers' default key
 ======================================================
 
-Some Huawei routers use a default WEP key that is easy findable.
-Thanks for the clever people at Websec.mx for figuring out the
-generation algorithm!
+Some Huawei routers use a default WEP key that is easy findable because
+it can be calculated using the MAC address of the router.
+
+Thanks and congrats to the clever people at Websec.mx for figuring out the
+generation algorithm after many hours of reverse-engineering.
 
 This repository contains two programs that make use of the discovery.
 
