@@ -16,7 +16,7 @@ a5=0,4,8,12,0,4,8,12,0,4,8,12,0,4,8,12
 a8=0,5,11,14,6,3,13,8,12,9,7,2,10,15,1,4
 a10=0,14,13,3,11,5,6,8,6,8,11,5,13,3,0,14
 
-def hex2dec(s):
+def _hex2dec(s):
 	return int(s, 16)
 
 def default_key(mac_as_string):
@@ -31,7 +31,7 @@ def default_key(mac_as_string):
     n13=0,1,3,2,6,7,5,4,15,14,12,13,9,8,10,11
     n14=0,1,3,2,4,5,7,6,12,13,15,14,8,9,11,10
     n31=0,10,4,14,9,3,13,7,2,8,6,12,11,1,15,5
-    mac = map(hex2dec, mac_as_string.replace(':',''))
+    mac = map(_hex2dec, mac_as_string.replace(':',''))
     ya=(a2[mac[0]])^(n11[mac[1]])^(a7[mac[2]])^(a8[mac[3]])^(a14[mac[4]])^(a5[mac[5]])^(a5[mac[6]])^(a2[mac[7]])^(a0[mac[8]])^(a1[mac[9]])^(a15[mac[10]])^(a0[mac[11]])^13
     yb=(n5[mac[0]])^(n12[mac[1]])^(a5[mac[2]])^(a7[mac[3]])^(a2[mac[4]])^(a14[mac[5]])^(a1[mac[6]])^(a5[mac[7]])^(a0[mac[8]])^(a0[mac[9]])^(n31[mac[10]])^(a15[mac[11]])^4
     yc=(a3[mac[0]])^(a5[mac[1]])^(a2[mac[2]])^(a10[mac[3]])^(a7[mac[4]])^(a8[mac[5]])^(a14[mac[6]])^(a5[mac[7]])^(a5[mac[8]])^(a2[mac[9]])^(a0[mac[10]])^(a1[mac[11]])^7
@@ -72,7 +72,7 @@ def default_ssid(mac_as_string):
     n30=0,15,14,1,12,3,2,13,8,7,6,9,4,11,10,5
     n32=0,10,5,15,11,1,14,4,6,12,3,9,13,7,8,2
     n33=0,4,9,13,3,7,10,14,7,3,14,10,4,0,13,9
-    mac = map(hex2dec, mac_as_string.replace(':',''))
+    mac = map(_hex2dec, mac_as_string.replace(':',''))
     s1=(n1[mac[0]])^(a4[mac[1]])^(a6[mac[2]])^(a1[mac[3]])^(a11[mac[4]])^(n20[mac[5]])^(a10[mac[6]])^(a4[mac[7]])^(a8[mac[8]])^(a2[mac[9]])^(a5[mac[10]])^(a9[mac[11]])^5
     s2=(n2[mac[0]])^(n8[mac[1]])^(n15[mac[2]])^(n17[mac[3]])^(a12[mac[4]])^(n21[mac[5]])^(n24[mac[6]])^(a9[mac[7]])^(n27[mac[8]])^(n29[mac[9]])^(a11[mac[10]])^(n32[mac[11]])^10
     s3=(n3[mac[0]])^(n9[mac[1]])^(a5[mac[2]])^(a9[mac[3]])^(n19[mac[4]])^(n22[mac[5]])^(a12[mac[6]])^(n25[mac[7]])^(a11[mac[8]])^(a13[mac[9]])^(n30[mac[10]])^(n33[mac[11]])^11
